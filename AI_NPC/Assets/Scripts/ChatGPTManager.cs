@@ -82,6 +82,7 @@ public class ChatGPTManager : MonoBehaviour
             {
                 if (chatResponse.Content.Contains(item.actionKeyword))
                 {
+                    Debug.Log("ChatGPT: "+ chatResponse.Content);
                     string textNoKeyword = chatResponse.Content.Replace(item.actionKeyword, "");
                     chatResponse.Content = textNoKeyword;
                     item.actionEvent.Invoke();

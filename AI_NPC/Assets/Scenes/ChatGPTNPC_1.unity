@@ -893,6 +893,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ebeb665ea2856f4aae516318d1e1431, type: 3}
+--- !u!95 &960654030 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 7ebeb665ea2856f4aae516318d1e1431,
+    type: 3}
+  m_PrefabInstance: {fileID: 960654029}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1031860534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,6 +1553,24 @@ MonoBehaviour:
     and meaningful conversations with people and you love helping people
   scene: We are in Lagos, The busiest part of Nigeria with all its nuances
   maxResponseWordsLimit: 15
+  actions:
+  - actionKeyword: START_DANCE
+    actionDescription: I want you to dance or to show me your secret talent
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 960654030}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Dance
+            m_BoolArgument: 0
+          m_CallState: 2
   OnResponse:
     m_PersistentCalls:
       m_Calls:
