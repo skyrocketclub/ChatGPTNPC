@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using OpenAI;
 using UnityEngine.Events;
+using Oculus.Voice.Dictation;
 
 
 public class ChatGPTManager : MonoBehaviour
@@ -11,10 +12,13 @@ public class ChatGPTManager : MonoBehaviour
     public string personality;
     [TextArea(5, 20)]
     public string scene;
-    public int maxResponseWordsLimit = 15;
+    public int maxResponseWordsLimit = 30;
 
     //triggering specific actions from the NPC...
     public List<NPCAction> actions;
+
+    public AppDictationExperience voiceToText;
+
     [System.Serializable]
     public struct NPCAction
     {
@@ -55,7 +59,7 @@ public class ChatGPTManager : MonoBehaviour
         foreach(var item in actions)
         {
             instructions += "if I imply that I want you to do the following: "+ item.actionDescription + ". You must add to your answer the following keyword: "+
-                item.actionKeyword + "\n";
+                item.actionKeyword + "\n and your response must be linked with "+item.actionDescription;
         }
 
         return instructions;
@@ -100,12 +104,15 @@ public class ChatGPTManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        voiceToText.DictationEvents.OnFullTranscription.AddListener(AskChatGPT);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            voiceToText.Activate();
+        }
     }
 }
