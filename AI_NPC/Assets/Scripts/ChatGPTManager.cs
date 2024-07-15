@@ -48,7 +48,7 @@ public class ChatGPTManager : MonoBehaviour
             "You must answer in less than " + maxResponseWordsLimit + " words. \n" +
             "Here is the information about your personality: \n" + personality + "\n" +
             "here is the information about the Scene around you: \n"+
-            BuildActionInstructions() + 
+          //  BuildActionInstructions() + 
             "here is the message of the player: \n";
         return instructions;
     }
@@ -58,7 +58,7 @@ public class ChatGPTManager : MonoBehaviour
         string instructions = " ";
         foreach(var item in actions)
         {
-            instructions += "if I imply that I want you to do the following: "+ item.actionDescription + ". You must add to your answer the following keyword: "+
+            instructions += "if I say explicitly that I want you to do the following: "+ item.actionDescription + ". You must add to your answer the following keyword: "+
                 item.actionKeyword + "\n and your response must be linked with "+item.actionDescription;
         }
 
