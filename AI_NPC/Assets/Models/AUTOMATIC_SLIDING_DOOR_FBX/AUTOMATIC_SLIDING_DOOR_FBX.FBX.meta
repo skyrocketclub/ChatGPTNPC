@@ -3,7 +3,27 @@ guid: 445a3615b74aa3d44ac5ef3706aa039d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ALUMINYUM
+    second: {fileID: 2100000, guid: 406948f4959d50a4bad1c2b172e8a474, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CAM
+    second: {fileID: 2100000, guid: 83cd0885b249d3b40a50c82d5a53c61a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FITIL
+    second: {fileID: 2100000, guid: 46dfc612ec0c0cd4f8a8979dbb5061ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FOTOSEL
+    second: {fileID: 2100000, guid: 9fc69c0184ad13141b52214f869b6a8b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
