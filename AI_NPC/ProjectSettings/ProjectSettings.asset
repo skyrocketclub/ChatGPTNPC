@@ -171,7 +171,7 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 22
+  AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -807,7 +807,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: READY_PLAYER_ME
+    Android: READY_PLAYER_ME;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS
     EmbeddedLinux: READY_PLAYER_ME
     GameCoreScarlett: READY_PLAYER_ME
     GameCoreXboxOne: READY_PLAYER_ME
@@ -817,10 +817,10 @@ PlayerSettings:
     PS5: READY_PLAYER_ME
     QNX: READY_PLAYER_ME
     Stadia: READY_PLAYER_ME
-    Standalone: READY_PLAYER_ME
+    Standalone: READY_PLAYER_ME;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS
     VisionOS: READY_PLAYER_ME
     WebGL: READY_PLAYER_ME
-    Windows Store Apps: READY_PLAYER_ME
+    Windows Store Apps: READY_PLAYER_ME;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS
     XboxOne: READY_PLAYER_ME
     iPhone: READY_PLAYER_ME
     tvOS: READY_PLAYER_ME
@@ -930,7 +930,7 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 70086375-aefa-4d7a-8255-2015b11293f2
   framebufferDepthMemorylessMode: 0

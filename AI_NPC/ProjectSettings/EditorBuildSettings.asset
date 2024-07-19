@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChatGPTNPC_1.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b0042c476da73c74e9ca36dd6547f5f9,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5bc961c7e495c1d4fa8939d4b9c03e5f,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 0c3e3143d28939d4891a994e279ba5c6,
+      type: 2}
