@@ -4,6 +4,7 @@ using UnityEngine;
 using OpenAI;
 using UnityEngine.Events;
 using Oculus.Voice.Dictation;
+using UnityEngine.InputSystem;
 
 
 public class ChatGPTManager : MonoBehaviour
@@ -18,6 +19,11 @@ public class ChatGPTManager : MonoBehaviour
     public List<NPCAction> actions;
 
     public AppDictationExperience voiceToText;
+
+    //controlling player input
+    public InputActionAsset inputActions;
+    private InputAction _A;
+    private InputAction _X;
 
     [System.Serializable]
     public struct NPCAction
@@ -105,14 +111,26 @@ public class ChatGPTManager : MonoBehaviour
     void Start()
     {
         voiceToText.DictationEvents.OnFullTranscription.AddListener(AskChatGPT);
+        _A = inputActions.FindActionMap("XRI RightHand").FindAction("A");
+        _A.Enable();
+        _A.performed += ActivateVoiceToText;
+
+        _X = inputActions.FindActionMap("XRI LeftHand").FindAction("X");
+        _X.Enable();
+        _X.performed += ActivateVoiceToText;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            voiceToText.Activate();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    voiceToText.Activate();
+        //}
+    }
+
+    public void ActivateVoiceToText(InputAction.CallbackContext context)
+    {
+        voiceToText.Activate();
     }
 }
