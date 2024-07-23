@@ -120,13 +120,24 @@ public class ChatGPTManager : MonoBehaviour
         _X.performed += ActivateVoiceToText;
     }
 
+
+    void OnDestroy()
+    {
+        _A.performed -= ActivateVoiceToText;
+        _A.Disable();
+
+        _X.performed -= ActivateVoiceToText;
+        _X.Disable();
+            
+        voiceToText.DictationEvents.OnFullTranscription.RemoveListener(AskChatGPT);
+    }
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    voiceToText.Activate();
-        //}
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            voiceToText.Activate();
+        }
     }
 
     public void ActivateVoiceToText(InputAction.CallbackContext context)

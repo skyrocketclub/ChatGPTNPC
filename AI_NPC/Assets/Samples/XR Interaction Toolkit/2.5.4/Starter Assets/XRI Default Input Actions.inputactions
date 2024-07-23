@@ -447,7 +447,7 @@
                 {
                     "name": "X",
                     "type": "Button",
-                    "id": "f5811769-037d-46ab-9231-9b877679de3e",
+                    "id": "80a6ecc1-3f0d-4a8a-805b-08db04148421",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -688,7 +688,7 @@
                 },
                 {
                     "name": "",
-                    "id": "0ecd7c9b-2f2c-4cc7-8b08-a1062543a85f",
+                    "id": "813cffd8-6092-4bd1-a978-da83d8fad5f0",
                     "path": "<OculusTouchController>{LeftHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
@@ -1263,7 +1263,7 @@
                 {
                     "name": "A",
                     "type": "Button",
-                    "id": "46742ca0-e874-41c5-a53e-ce570d642892",
+                    "id": "d8830e27-5271-484b-af8a-3c0b8701537f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -1504,7 +1504,7 @@
                 },
                 {
                     "name": "",
-                    "id": "dafcfa53-3b8c-4fa9-9355-8d420d7b776b",
+                    "id": "2e091287-7381-4b68-8cbd-4477780485bf",
                     "path": "<OculusTouchController>{RightHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
